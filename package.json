@@ -1,0 +1,8 @@
+{
+  "name": "@codeinc.mx/sass-helpers-library",
+  "version": "0.1.0",
+  "description": "A great sass helper functions and mixins library for developers by Code Inc MX",
+  "main": "sass/main.scss",
+  "author": "Sandro E. Martínez",
+  "license": "ISC"
+}

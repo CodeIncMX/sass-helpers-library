@@ -1,0 +1,7 @@
+/*
+* Return value if exists, otherwise throws an error message
+*/
+@function value-err($variable, $errMessage) {
+  @if not $variable { @error $errMessage; }
+  @else { @return $variable; }
+}

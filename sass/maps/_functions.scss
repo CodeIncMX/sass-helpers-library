@@ -1,0 +1,17 @@
+/*
+* Return value if exists, otherwise return the default value
+*/
+@function map-value($map, $key, $defaultValue) {
+  @return if( map-get($map, $key), map-get($map, $key), $defaultValue );
+}
+
+/*
+* Return value if exists, otherwise throws an error message
+*/
+@function map-value-err($map, $key, $errMessage) {
+  $value: map-value($map, $key, false);
+
+  @if not $value { @error $errMessage; }
+  @else { @return $value; }
+}
+

@@ -1,0 +1,14 @@
+/*
+* Set value to a property if exists in a map
+* If $key is not set then the key for searching in map is property__name
+*/
+@mixin set-prop($property__name, $map, $key: false ) {
+
+  @if (not $key) {
+    $key: $property__name;
+  }
+
+  @if (map-has-key($map, $key)) {
+    #{$property__name}: map-get($map, $key);
+  }
+}
