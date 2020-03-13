@@ -2,7 +2,10 @@
 * Return value if exists, otherwise return the default value
 */
 @function map-value($map, $key, $defaultValue) {
-  @return if( map-get($map, $key), map-get($map, $key), $defaultValue );
+  @if (not map-has-key($map, $key)) {
+    @return $defaultValue;
+  }
+  @return map-get($map, $key);
 }
 
 /*
